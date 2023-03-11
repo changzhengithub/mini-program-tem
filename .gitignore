@@ -12,6 +12,8 @@ $RECYCLE.BIN/
 
 # Node.js
 node_modules/
+miniprogram_npm/
 
 # 自定义配置
 project.private.config.json
+
