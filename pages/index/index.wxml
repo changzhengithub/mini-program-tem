@@ -1,5 +1,5 @@
 <!--index.wxml-->
 <view class="index">
   <van-button type="default" bindtap="showToast">{{initData ? '已登录' : '请登录'}}</van-button>
-  <van-button type="primary" wx:if="{{!isLogin}}" bindtap="getLoginInfo">登录</van-button>
+  <van-button type="primary" wx:if="{{!userIsLogin}}" bindtap="getLoginInfo">登录</van-button>
 </view>

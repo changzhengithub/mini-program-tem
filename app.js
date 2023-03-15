@@ -19,19 +19,5 @@ App({
         }
       })
     })
-
-    // 权限判断
-    this.checkLogin()
-  },
-
-
-  // 检查是否登录
-  checkLogin() {
-    const token = wx.getStorageSync('token');
-    if (token) {
-      this.globalData.isLogin = true;
-    } else {
-      wx.clearStorageSync();
-    }
   }
 })

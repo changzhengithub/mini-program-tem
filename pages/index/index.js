@@ -1,25 +1,28 @@
 // index.js
 
 import { menusApi } from '../../api/index'
+import permission from '../../utils/permission'
 
-const app = getApp();
-const { isLogin } = app.globalData;
+// const app = getApp();
+// const { isLogin } = app.globalData;
 
 Page({
   data: {
-    isLogin,
-    initData: null
+    userIsLogin: false,initData: null
   },
   
-  onLoad: function () {
-    if (this.data.isLogin) {
+  onShow: function () {
+    const isLogin = permission.checkLogin()
+    this.setData({
+      userIsLogin: isLogin });
+    if (this.data.userIsLogin) {
       this.getInitData()
     }
   },
 
   getInitData() {
     const that = this
-    menusApi({}, '加装中...')
+    menusApi({},  "加装中...")
       .then((res) => {
         if (res.code !== 200) {
           wx.showToast({
@@ -46,7 +49,7 @@ Page({
 
   // 去登录
   getLoginInfo() {
-    if (this.data.isLogin) return
+    if (this.data.userIsLogin) return
     wx.navigateTo({
       url: '/pages/empower/index'
     })
