@@ -8,6 +8,7 @@ import permission from '../../utils/permission'
 
 Page({
   data: {
+		childUrl: '../../assets/images/图层-1.jpg',
     userIsLogin: false,initData: null
   },
   
@@ -18,7 +19,7 @@ Page({
     if (this.data.userIsLogin) {
       this.getInitData()
     }
-  },
+	},
 
   getInitData() {
     const that = this
@@ -53,5 +54,10 @@ Page({
     wx.navigateTo({
       url: '/pages/empower/index'
     })
-  }
+	},
+	
+	// 组件自定义事件
+	onMyEvent(e) {
+		console.log(e.detail); // e.detail 传入的参数
+	}
 })

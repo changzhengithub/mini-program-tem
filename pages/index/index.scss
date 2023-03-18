@@ -3,4 +3,10 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+
+  .image {
+    width: 100%;
+    height: 400rpx;
+    background-image: url(require('../../assets/images/图层-1.jpg'));
+  }
 }

@@ -1,0 +1,5 @@
+<!--components/picture/index.wxml-->
+<view class="picture">
+	<image src="{{url}}"></image>
+	<button bindtap="onTap">触发自定义“myevent”事件</button>
+</view>
