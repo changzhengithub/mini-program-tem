@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/my/index",
     "pages/empower/index"
   ],
   "window": {
@@ -8,6 +9,24 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#86909C",
+    "selectedColor": "#165DFF",
+    "backgroundColor": "#f2f2f2",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./assets/images/home.png",
+      "selectedIconPath": "./assets/images/home-selected.png"
+    }, {
+      "pagePath": "pages/my/index",
+      "text": "我的",
+      "iconPath": "./assets/images/my.png",
+      "selectedIconPath": "./assets/images/my-selected.png"
+    }]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
